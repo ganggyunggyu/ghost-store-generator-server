@@ -22,9 +22,13 @@
 프로젝트를 로컬에 설치하여 `blog-analyzer` 명령어를 사용할 수 있습니다.
 
 ```bash
+# 가상환경 생성
+python3 -m venv venv
 # 프로젝트 디렉토리에서 다음 명령어를 실행합니다.
 # 가상환경을 사용하고 있다면 먼저 활성화해주세요.
 source venv/bin/activate
+
+uvicorn api:app --host 0.0.0.0 --port 8000 --reload
 
 uvicorn main:app --reload
 
@@ -93,4 +97,4 @@ pip install -r requirements.txt
 
 ### 4. OpenAI API 키 설정
 
-`.env` 파일에 `OPENAI_API_KEY`를 설정합니다.# ghost-store-generator-server
+`.env` 파일에 `OPENAI_API_KEY`를 설정합니다.
